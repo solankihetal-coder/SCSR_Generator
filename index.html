@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kuromi & Melody Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head> 
+<body class="kuromi-theme">
+  <main class="app-card">
+      <!-- Your calculator UI here -->
+  <!-- <span class="decor decor1"></span> -->
+  <!-- <span class="decor decor2"></span> -->
+  <!-- <span class="decor decor3"></span> -->
+  <span class="decor decor4"></span>
+  <span class="decor decor5"></span>
+    <header class="header">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+            <img src="logo k m.png" alt="Kuromi logo" id="logoImg">
+        </div>
+        <div class="title">
+          <h1 id="appTitle">Kuromi’s Chaos Calculator</h1>
+          <p id="appTagline">Squares, cubes & roots — served with sarcasm.</p>
+        </div>
+      </div>
+
+      <div class="mode" title="Toggle Theme" role="switch" aria-checked="false" id="themeSwitch">
+        <span class="tiny" id="themeLabel">Kuromi</span>
+        <div class="switch" id="switch"><div class="thumb"></div></div>
+      </div>
+    </header>
+
+    <section class="content">
+      <div class="panel" id="panel-left">
+        <div class="input-row">
+          <label class="tiny" for="numInput" style="min-width:90px" id="inputLabel">Math Chaos</label>
+          <input id="numInput" type="number" step="any" placeholder="Type a number…" autocomplete="off" />
+        </div>
+        
+        <div class="btns">
+          <button class="primary-button" data-op="square">x² Square</button>
+          <button class="primary-button" data-op="cube">x³ Cube</button>
+          <button class="primary-button" data-op="sqrt">√ Square Root</button>
+          <button data-op="clear" title="Clear input & result">Clear</button>
+          <button data-op="rnd" title="Random number">Random</button>
+        </div>
+
+        <div class="readout pop" id="readout">
+          <h3>Result <span class="badge" id="tag">–</span></h3>
+          <div class="result" id="result">—</div>
+          <div class="kuromi-voice" id="kuromi">“Kuromi’s not a bad girl… just a little mischievous.” 😈</div>
+          <div class="tools">
+            <button id="copyBtn" title="Copy result to clipboard">Copy</button>
+            <button id="roundBtn" title="Toggle rounded / full precision">Round</button>
+          </div>
+        </div>
+      </div>
+
+      <aside class="panel" id="panel-right">
+        <div class="tiny" style="margin-bottom:10px">
+          <span id="historyTitle">My Mischief List 💀</span>
+          <img src="icons8-delete-24.png" alt="delete icon" id="clearHistoryBtn" title="Clear history" />
+        </div>
+        <div class="history" id="history" aria-live="polite"></div>
+      </aside>
+    </section>
+
+    <div class="footer">
+      <span id="footerTip">Tip: Press <code>S</code> for square, <code>C</code> for cube, <code>R</code> for root.</span>
+    </div>
+  </main>
+  <script src="script.js"></script>
+
+</body>
+</html>
