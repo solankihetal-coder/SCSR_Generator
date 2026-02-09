@@ -120,15 +120,9 @@ button {
 
 
 /* fade down if UI gets tight */
-/* @media (max-width: 600px) {
+@media (max-width: 600px) {
   .decor4, .decor5 {
     opacity: 0.7;           
     transform: scale(0.8);
   }
-} */
-
-
-
-
-
-
+}
