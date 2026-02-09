@@ -42,8 +42,6 @@
   --melody-input-bg: #ffc2fc;
 }
 
-
-
 /* =========================================
    2. Base Page & Layout
 ========================================= */
@@ -106,27 +104,27 @@ body {
 /* Kuromi Theme */
 .decor4 {
   width: 12%;
-  bottom: 2%;
-  left: 16%;
+  bottom: -2%;
+  left: -1%;
   background-image: url('kuromi-dressedup.png');
 }
 .decor5 {
   width: 10%;
-  top: -1%;
-  right: 19%;
+  top: -2%;
+  right: -1%;
   background-image: url('top-right-bow.png');
   transform: rotate(30deg); 
 }
 
 /* Melody Theme overrides */
 body.melody-theme .decor4 {
-  background-image: url('/melody-dressup.png');
+  background-image: url('melody-dressup.png');
   width: 10%;
   bottom: 3.5%;
   left: 16%;
 }
 body.melody-theme .decor5 {
-  background-image: url('/melody-bow-top-right.png');
+  background-image: url('melody-bow-top-right.png');
   width: 10%;
   top: 4%;
   right: 20%;
