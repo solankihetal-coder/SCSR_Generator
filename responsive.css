@@ -7,9 +7,20 @@
 html {
   font-size: clamp(14px, 1.2vw, 18px);
 }
+/* --- Prevent mobile overflow --- */
+body{
+  min-height:100vh;
+  height:auto; /* IMPORTANT FIX */
+  padding:12px;
+}
 
 /* --- App Card --- */
-.app-card {
+
+.app-card{
+  position:relative;
+}
+
+.app-card, .melody-theme .app-card {
   width: min(95%, 880px);
   padding: clamp(16px, 4vw, 30px);
   margin: clamp(10px, 2vw, 20px) auto;
@@ -21,7 +32,6 @@ html {
     grid-template-columns: 1fr; /* collapse to single column on tablets */
     gap: clamp(14px, 3vw, 18px);
   }
-}
 
 /* --- Panel adjustments --- */
 .panel {
@@ -94,35 +104,25 @@ button {
 }
 
 /* --- Decorations (stickers) --- */
+
 .decor4, .decor5 {
   max-width: 30vw;         /* scale images down on small screens */
   width: clamp(50px, 15vw, 180px);
   height: auto;
 }
 
-.decor4{
-  left: 1px;
-  bottom: 8%;
+.decor4, .melody-theme .decor4{
+  display: none;  /* hide decor4 on mobile for less clutter */
 }
-.decor5{
-  top: 8%;
-  right: -10px;
+.decor5, .melody-theme .decor5{
+  display: none;  /* hide decor5 on mobile for less clutter */
 }
-.melody-theme .decor4{
-  left: -1px;
-  bottom: 10%;
-}
-
-.melody-theme .decor5{
-  top: 8%;
-  right: -10px;
-}
-
 
 /* fade down if UI gets tight */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .decor4, .decor5 {
     opacity: 0.7;           
     transform: scale(0.8);
   }
+} */
 }
